@@ -1,0 +1,2 @@
+# Safari_Yejing
+Safari-Yejing 是一个为 Safari 浏览器带来页面内黑暗模式的插件。它是一个 [WebShade](https://github.com/WilsontheWolf/WebShade) 的分支，不过将 [DarkReader](https://github.com/darkreader/darkreader) 替换为了 [野径云俱黑，江船火独明](http://via-app.cn/#/pluginDetail/19)，因为后者有纯黑色的页面背景。

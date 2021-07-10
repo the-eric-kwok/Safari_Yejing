@@ -1,0 +1,5 @@
+ignore
+.theos
+packages
+.DS_Store
+.history
