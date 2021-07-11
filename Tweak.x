@@ -7,7 +7,7 @@
         [self evaluateJavaScript: 
         // This massive string is the entirty of dark reader and my script to run it.
         // See script.js for more info
-        @"(function(){try{const lib=document.createElement('script');lib.src='https://cdn.jsdelivr.net/gh/the-eric-kwok/safari-yejing/yejing.js';lib.defer=true;document.body.append(lib)}catch(err){console.log('DarkReader：',err)}})();"
+        @"function main(){const w=window;const key=encodeURIComponent('Safari_Yejing:执行判断');if(w[key]){return};w[key]=true;try{const script=document.createElement('script');script.src='https://cdn.jsdelivr.net/gh/the-eric-kwok/Safari_Yejing/野径云俱黑，江船火独明.js';script.defer=true;document.body.append(script);console.log('Safari_Yejing injected')}catch(err){console.log('Safari_Yejing：',err)}}window.onload=main();"
          completionHandler: nil];
         return %orig;
     }
