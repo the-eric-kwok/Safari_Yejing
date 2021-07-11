@@ -5,7 +5,7 @@
  * @description: 让你的网页随风潜入夜
  * @include: *
  * @createTime: 2019-10-19 01:09:24
- * @updateTime: 2019-10-20 02:36:48
+ * @updateTime: 2021-7-11 14:50:00
  */
 (function () {
   /* 判断是否该执行 */
@@ -33,27 +33,29 @@
     };
     init() {
       this.addStyle(`
-        html, body {
-          background-color: #000 !important;
-        }
-        * {
-          color: #CCD1D9 !important;
-          box-shadow: none !important;
-        }
-        *:after, *:before {
-          border-color: #1e1e1e !important;
-          color: #CCD1D9 !important;
-          box-shadow: none !important;
-          background-color: transparent !important;
-        }
-        a, a > *{
-          color: #409B9B !important;
-        }
-        [data-change-border-color][data-change-border-color-important] {
-          border-color: #1e1e1e !important;
-        }
-        [data-change-background-color][data-change-background-color-important] {
-          background-color: #000 !important;
+        @media (prefers-color-scheme: dark) {
+          html, body {
+            background-color: #000 !important;
+          }
+          * {
+            color: #CCD1D9 !important;
+            box-shadow: none !important;
+          }
+          *:after, *:before {
+            border-color: #1e1e1e !important;
+            color: #CCD1D9 !important;
+            box-shadow: none !important;
+            background-color: transparent !important;
+          }
+          a, a > *{
+            color: #409B9B !important;
+          }
+          [data-change-border-color][data-change-border-color-important] {
+            border-color: #1e1e1e !important;
+          }
+          [data-change-background-color][data-change-background-color-important] {
+            background-color: #000 !important;
+          }
         }
       `);
       this.selectAllNodes(node => {
