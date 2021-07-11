@@ -25,7 +25,7 @@
     return;
   };
   window[key] = true;
-
+  console.log('野径云俱黑，江船火独明');
   /* 开始执行代码 */
   class ChangeBackground {
     constructor() {
