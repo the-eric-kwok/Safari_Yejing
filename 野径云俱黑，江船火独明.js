@@ -1,12 +1,14 @@
-/*
- * @name: 野径云俱黑，江船火独明
- * @Author: 谷花泰
- * @version: 5.1
- * @description: 让你的网页随风潜入夜
- * @include: *
- * @createTime: 2019-10-19 01:09:24
- * @updateTime: 2021-7-11 15:15:00
- */
+// ==UserScript==
+// @name         野径云俱黑，江船火独明
+// @namespace    http://via-app.cn
+// @version      1.0.0
+// @description  js脚本实现夜间模式，支持与系统深色模式联动
+// @author       谷花泰, EricKwok
+// @include      *
+// @icon         https://www.google.com/s2/favicons?domain=via-app.cn
+// @grant        none
+// ==/UserScript==
+
 (function () {
   /* 判断是否该执行 */
   /* 网址黑名单制，遇到这些域名不执行 */
@@ -99,12 +101,13 @@
     /* 是否为灰白黑 */
     isWhiteToBlack(colorStr = '') {
       let hasWhiteToBlack = false;
-      const colorArr = colorStr.match(/rgb.+?\)/g);
+      const colorArr = colorStr.match(new RegExp('rgb.+?\\)', 'g'));
+      console.log(colorStr, colorArr);
       if (!colorArr || colorArr.length === 0) {
         return true;
       };
       colorArr.forEach(color => {
-        const reg = /rgb[a]*?\(([0-9]+),.*?([0-9]+),.*?([0-9]+).*?\)/g;
+        const reg = new RegExp('rgb[a]*?\\(([0-9]+),.*?([0-9]+),.*?([0-9]+).*?\\)', 'g');
         const result = reg.exec(color);
         const red = result[1];
         const green = result[2];
